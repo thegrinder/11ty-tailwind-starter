@@ -1,11 +1,10 @@
 {
-  "name": "11ty-tailwind-forestry-starter",
+  "name": "11ty-tailwind-starter",
   "version": "1.0.0",
-  "description": "11ty tailwind and forestry starter",
+  "description": "11ty with tailwind starter",
   "keywords": [
     "tailwindcss",
-    "eleventy",
-    "forestry"
+    "eleventy"
   ],
   "main": "index.js",
   "config": {
@@ -15,9 +14,10 @@
     "js_out": "_site/index.min.js"
   },
   "scripts": {
+    "lint": "eslint src --fix",
     "build:11ty": "eleventy",
     "build:css": "tailwindcss -i $npm_package_config_css_in -o $npm_package_config_css_out --minify",
-    "build:js": "esbuild $npm_package_config_js_in --outfile=$npm_package_config_js_out --bundle --minify",
+    "build:js": "esbuild $npm_package_config_js_in --outfile=$npm_package_config_js_out --bundle",
     "build": "NODE_ENV=production npm-run-all build:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "tailwindcss -i $npm_package_config_css_in -o $npm_package_config_css_out --watch",
@@ -29,6 +29,8 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "esbuild": "^0.14.14",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
     "husky": "^7.0.4",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
