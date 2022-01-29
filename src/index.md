@@ -1,6 +1,4 @@
 ---
-title: Hello World
-layout: "base.njk"
+title: Home
+layout: 'layouts/base.njk'
 ---
-
-Hell World!

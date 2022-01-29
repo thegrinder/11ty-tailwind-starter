@@ -1,5 +1,5 @@
 module.exports = (eleventyConfig) => {
-  eleventyConfig.addPassthroughCopy('./favicon/*');
+  eleventyConfig.addPassthroughCopy('./public/*');
   eleventyConfig.setBrowserSyncConfig({
     files: ['_site/*'],
     open: true,
