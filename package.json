@@ -2,18 +2,32 @@
   "name": "11ty-tailwind-forestry-starter",
   "version": "1.0.0",
   "description": "11ty tailwind and forestry starter",
+  "keywords": [
+    "tailwindcss",
+    "eleventy",
+    "forestry"
+  ],
   "main": "index.js",
+  "config": {
+    "css_in": "src/index.css",
+    "css_out": "_site/index.min.css"
+  },
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
-    "prepare": "husky install"
+    "build:11ty": "eleventy",
+    "build:css": "tailwindcss -i $npm_package_config_css_in -o $npm_package_config_css_out --minify",
+    "build": "NODE_ENV=production npm-run-all build:*",
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "tailwindcss -i $npm_package_config_css_in -o $npm_package_config_css_out --watch",
+    "dev": "NODE_ENV=development npm-run-all -p dev:*"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "husky": "^7.0.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.5.1",
-    "pretty-quick": "^3.1.3"
+    "pretty-quick": "^3.1.3",
+    "tailwindcss": "^3.0.18"
   }
 }
