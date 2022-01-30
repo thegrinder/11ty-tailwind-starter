@@ -31,20 +31,29 @@
     <link rel="stylesheet" href="index.min.css">
     <script src="index.min.js"></script>
   </head>
-  <body class="h-full bg-slate-50 dark:bg-slate-900 text-neutral-700 dark:text-neutral-100 font-body">
-    <nav class="shadow-sm dark:shadow-none dark:border-b dark:border-slate-800 dark:highlight-white bg-white dark:bg-slate-900">
-      <ul class="container mx-auto flex justify-between items-stretch h-16">
-        <li class="h-full">
-          <a class="h-full flex items-center px-4 font-semibold" href="/">Home</a>
-        </li>
-        <li class="h-full">
-          <button aria-label="Toggle color mode" id="color-mode-button" class="h-full flex items-center px-4 text-lg">
-            {% include "icons/light-bulb.njk" %}
-          </button>
-        </li>
-      </ul>
+  <body class="bg-slate-50 text-neutral-700 dark:bg-slate-900  dark:text-neutral-100 font-body h-full">
+    <nav class="container mx-auto">
+      <div class="h-16 flex w-full justify-between">
+        <ul class="h-full flex gap-2">
+          <li class="h-full">
+            <a class="h-full flex items-center px-4 font-semibold" href="/">P.</a>
+          </li>
+          <li class="h-full">
+            <a class="h-full flex items-center px-4 font-semibold" href="/work">Work</a>
+          </li>
+          <li class="h-full">
+            <a class="h-full flex items-center px-4 font-semibold" href="/blog">Blog</a>
+          </li>
+          <li class="h-full">
+            <a class="h-full flex items-center px-4 font-semibold" href="/contact">Contact</a>
+          </li>
+        </ul>
+        <button aria-label="Toggle color mode" id="color-mode-button" class="h-full flex items-center px-4 text-lg">
+          {% include "icons/light-bulb.njk" %}
+        </button>
+      </div>
     </nav>
-    <main class="container mx-auto py-12">
+    <main class="container mx-auto px-4">
       {{ content | safe }}
     </main>
   </body>
