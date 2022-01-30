@@ -1,0 +1,26 @@
+<section class="py-24 sm:py-36 xl:py-48">
+  <h2 class="text-7xl font-semibold mb-16">Work</h2>
+  <div class="grid grid-cols-2 gap-14">
+    {% for job in jobs %}
+    <article class="bg-white dark:bg-slate-800 shadow-md p-8 rounded-lg">
+        <div class="flex items-stretch">
+          <div class="mr-8">
+            <img alt="Whisbi logo" width="50px" height="50px" src="{{ job.logo }}" class="overflow-hidden rounded-md"/>
+          </div>
+          <div>
+            <h3 class="font-semibold text-xl">{{ job.company }}</h3>
+            <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-6">{{ job.startDate }} - {{ job.endDate }}<p>
+            <ul class="flex flex-col">
+              {% for item in job.items %}
+              <li class="text-neutral-800 dark:text-neutral-200 flex mb-2">
+                <span class="text-sky-500 dark:text-sky-300 text-lg mr-2 mt-0.5">{% include "icons/check-circle.njk" %}</span>
+                <span class="text-neutral-800 dark:text-neutral-200">{{ item }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+    </article>
+    {% endfor %}
+  </div>
+</section>
