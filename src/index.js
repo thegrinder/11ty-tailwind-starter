@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const min = 1000 * 60;
     if (
       !localStorage.introTimestamp ||
-      Date.now() - localStorage.introTimestamp > min
+      Date.now() - localStorage.introTimestamp > 10 * min
     ) {
       localStorage.setItem('introTimestamp', Date.now());
       setTimeout(() => {
