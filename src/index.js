@@ -44,6 +44,23 @@ window.addEventListener('DOMContentLoaded', () => {
     u(activeLink.id).addClass('text-sky-500 dark:text-sky-300');
   };
 
+  const removeIntro = () => {
+    console.log(Date.now() - localStorage.introTimestamp);
+    const min = 1000 * 60;
+    if (
+      !localStorage.introTimestamp ||
+      Date.now() - localStorage.introTimestamp > min
+    ) {
+      localStorage.setItem('introTimestamp', Date.now());
+      setTimeout(() => {
+        u('#intro').remove();
+      }, 2000);
+    } else {
+      u('#intro').remove();
+    }
+  };
+
   initializeColorMode();
   markActiveLink();
+  removeIntro();
 });

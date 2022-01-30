@@ -1,57 +1,28 @@
-<!doctype html>
+---
+layout: layouts/document.njk
+---
 
-<html lang="en" class="h-full">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>{{ title }}</title>
-    <meta name="description" content="Blog starter.">
-    <meta name="author" content="Pawel Szczepkowski">
-
-    <link rel="icon" href="/public/favicon.ico">
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/public/favicon-32x32.png"
-    >
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/public/favicon-16x16.png"
-    >
-    <link rel="apple-touch-icon" href="/public/apple-touch-icon.png">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/index.min.css">
-    <script src="/index.min.js"></script>
-  </head>
-  <body class="bg-slate-50 text-neutral-700 dark:bg-slate-900  dark:text-neutral-100 font-body h-full">
-    <nav class="container mx-auto">
-      <div class="h-16 flex w-full justify-between">
-        <ul class="h-full flex gap-2">
-          <li class="h-full">
-            <a id="home" class="h-full flex items-center px-4 font-semibold" href="/">P.</a>
-          </li>
-          <li class="h-full">
-            <a id="work" class="h-full flex items-center px-4 font-semibold" href="/work">Work</a>
-          </li>
-          <li class="h-full">
-            <a id="contact" class="h-full flex items-center px-4 font-semibold" href="/contact">Contact</a>
-          </li>
-        </ul>
-        <button aria-label="Toggle color mode" id="color-mode-button" class="h-full flex items-center px-4 text-lg">
-          {% include "icons/light-bulb.njk" %}
-        </button>
-      </div>
-    </nav>
-    <main class="container mx-auto px-4">
-      {{ content | safe }}
-    </main>
-  </body>
-</html>
+<body class="bg-slate-50 text-neutral-700 dark:bg-slate-900  dark:text-neutral-100 font-body h-full">
+  {% include "partials/intro.njk" %}
+  <nav class="container mx-auto">
+    <div class="h-16 flex w-full justify-between">
+      <ul class="h-full flex gap-2">
+        <li class="h-full">
+          <a id="home" class="h-full flex items-center px-4 font-semibold" href="/">P.</a>
+        </li>
+        <li class="h-full">
+          <a id="work" class="h-full flex items-center px-4 font-semibold" href="/work">Work</a>
+        </li>
+        <li class="h-full">
+          <a id="contact" class="h-full flex items-center px-4 font-semibold" href="/contact">Contact</a>
+        </li>
+      </ul>
+      <button aria-label="Toggle color mode" id="color-mode-button" class="h-full flex items-center px-4 text-lg">
+        {% include "icons/light-bulb.njk" %}
+      </button>
+    </div>
+  </nav>
+  <main class="container mx-auto px-4">
+    {{ content | safe }}
+  </main>
+</body>
