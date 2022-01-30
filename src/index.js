@@ -13,14 +13,37 @@ window.addEventListener('DOMContentLoaded', () => {
     } else {
       u('html').removeClass(darkModeClass);
     }
-  };
 
-  const addColorModeListener = () => {
     u('#color-mode-button').first().onclick = () => {
-      u('html').toggleClass('dark');
+      localStorage.setItem(
+        'theme',
+        u('#color-mode-button').hasClass(darkModeClass)
+          ? undefined
+          : darkModeClass
+      );
+      u('html').toggleClass(darkModeClass);
     };
   };
 
+  const markActiveLink = () => {
+    const navLinks = [
+      {
+        id: '#home',
+        href: '/',
+      },
+      {
+        id: '#work',
+        href: '/work/',
+      },
+      {
+        id: '#contact',
+        href: '/contact/',
+      },
+    ];
+    const activeLink = navLinks.find(({ href }) => href === location.pathname);
+    u(activeLink.id).addClass('text-sky-500 dark:text-sky-300');
+  };
+
   initializeColorMode();
-  addColorModeListener();
+  markActiveLink();
 });

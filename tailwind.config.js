@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/**/*.{njk,css}'],
+  content: ['./src/**/*.{njk,css,js}'],
   darkMode: 'class',
   theme: {
     fontFamily: {
