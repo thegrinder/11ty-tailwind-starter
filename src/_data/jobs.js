@@ -5,13 +5,19 @@ module.exports = [
     startDate: 'Jun 2021',
     endDate: 'till now',
     items: [],
+    stack: ['Typescript', 'React', 'React Query', 'Tailwind CSS', 'Cypress'],
   },
   {
     company: 'Docplanner',
     logo: '/public/logos/docplanner.jpeg',
     startDate: 'Sep 2020',
     endDate: 'June 2021',
-    items: [],
+    items: [
+      `Creating a tablet version of the doctor's app`,
+      `Building a profile screen in the patient's app`,
+      'Building a mobile UI kit from scratch',
+    ],
+    stack: ['Typescript', 'React', 'React Native', 'GraphQL', 'Jest'],
   },
   {
     company: 'Zopa',
@@ -22,8 +28,8 @@ module.exports = [
       'Developing credit card web origination journey',
       'Building credit card module for the React Native app',
       'Heavily contributing to Zopa open source components library',
-      'Technologies: Typescript, React, React Native, Redux, Jest, Cypress, Webpack,',
     ],
+    stack: ['Typescript', 'React', 'React Native', 'Redux', 'Jest', 'Cypress'],
   },
   {
     company: 'Strands',
@@ -33,8 +39,8 @@ module.exports = [
     items: [
       'Architecting components library used in all Strands products',
       'Implementing brand new invoicing widget',
-      'Technologies: React, Redux, Webpack, Immutable, ES6/ES7',
     ],
+    stack: ['React', 'Redux', 'Immutable'],
   },
   {
     company: 'Whisbi',
@@ -44,7 +50,7 @@ module.exports = [
     items: [
       'Redesigning and maintaining of clients’ landing pages',
       'Improving company Wordpress website',
-      'Technologies: Javascript, jQuery, Sass, Handlebars, Gulp, git',
     ],
+    stack: ['jQuery', 'Sass', 'Handlebars', 'Gulp'],
   },
 ];

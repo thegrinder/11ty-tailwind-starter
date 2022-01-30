@@ -1,26 +1,40 @@
 <section class="min-h-screen">
-  <h2 class="text-6xl font-semibold mb-16">Work</h2>
-  <div class="grid grid-cols-1 sm:grid-cols-2 gap-14">
+  <h2 class="text-neutral-800 dark:text-white text-4xl sm:text-6xl font-semibold mb-28">Work</h2>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
     {% for job in jobs %}
-    <article class="bg-white dark:bg-slate-800 shadow-md p-8 rounded-lg">
-      <div class="flex items-stretch">
-        <div class="mr-8 shrink-0">
-          <img alt="Whisbi logo" width="50px" height="50px" src="{{ job.logo }}" class="overflow-hidden rounded-md"/>
+      <article class="bg-slate-50 dark:bg-slate-800 shadow-md p-8 pb-10 rounded-lg h-full">
+        <div class="flex flex-col h-full">
+          <div class="flex gap-8 mb-8">
+            <div class="shrink-0">
+              <img alt="Whisbi logo" width="50px" height="50px" src="{{ job.logo }}" class="overflow-hidden rounded-md"/>
+            </div>
+            <div>
+              <h3 class="font-semibold text-xl">{{ job.company }}</h3>
+              <p class="text-slate-500 dark:text-slate-400 text-sm">{{ job.startDate }} - {{ job.endDate }}</p>
+            </div>
+          </div>
+          <div class="flex flex-col lg:ml-20 grow">
+            <ul class="grow mb-8">
+              {% for item in job.items %}
+                <li class="flex mb-2 leading-relaxed">
+                  <span class="text-sky-500 dark:text-sky-300 text-lg mr-2 mt-0.5">{% include "icons/check-circle.njk" %}</span>
+                  <span>{{ item }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+            <ul class="text-slate-500 dark:text-slate-400 flex flex-wrap text-sm">
+              {% for tech in job.stack %}
+                <li class="flex items-center">
+                  <span>{{ tech }}</span>
+                  {% if loop.index !== job.stack.length %}
+                    <span class="bg-sky-600 dark:bg-sky-300 mx-4 inline-block w-1.5 h-1.5 rounded-full"></span>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
-        <div>
-          <h3 class="font-semibold text-xl">{{ job.company }}</h3>
-          <p class="text-sm text-neutral-600 dark:text-neutral-400 mb-6">{{ job.startDate }} - {{ job.endDate }}<p>
-          <ul class="flex flex-col">
-            {% for item in job.items %}
-            <li class="text-neutral-800 dark:text-neutral-200 flex mb-2">
-              <span class="text-sky-500 dark:text-sky-300 text-lg mr-2 mt-0.5">{% include "icons/check-circle.njk" %}</span>
-              <span class="text-neutral-800 dark:text-neutral-200">{{ item }}</span>
-            </li>
-            {% endfor %}
-          </ul>
-        </div>
-      </div>
-    </article>
+      </article>
     {% endfor %}
   </div>
 </section>
