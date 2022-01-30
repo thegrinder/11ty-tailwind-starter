@@ -1,21 +1,21 @@
 module.exports = [
   {
     company: 'Cooltra',
-    logo: '/public/cooltra.png',
+    logo: '/public/logos/cooltra.png',
     startDate: 'Jun 2021',
     endDate: 'till now',
     items: [],
   },
   {
     company: 'Docplanner',
-    logo: '/public/docplanner.jpeg',
+    logo: '/public/logos/docplanner.jpeg',
     startDate: 'Sep 2020',
     endDate: 'June 2021',
     items: [],
   },
   {
     company: 'Zopa',
-    logo: '/public/zopa.jpeg',
+    logo: '/public/logos/zopa.jpeg',
     startDate: 'Aug 2018',
     endDate: 'Aug 2020',
     items: [
@@ -27,7 +27,7 @@ module.exports = [
   },
   {
     company: 'Strands',
-    logo: '/public/strands.jpeg',
+    logo: '/public/logos/strands.jpeg',
     startDate: 'May 2017',
     endDate: 'Aug 2018',
     items: [
@@ -38,7 +38,7 @@ module.exports = [
   },
   {
     company: 'Whisbi',
-    logo: '/public/whisbi.png',
+    logo: '/public/logos/whisbi.png',
     startDate: 'Mar 2016',
     endDate: 'Apr 2017',
     items: [
