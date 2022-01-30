@@ -4,7 +4,7 @@ layout: layouts/document.njk
 
 <body class="bg-slate-50 text-neutral-700 dark:bg-slate-900  dark:text-neutral-100 font-body h-full relative">
   {% include "partials/intro.njk" %}
-  <nav class="container mx-auto">
+  <nav class="container mx-auto relative z-10">
     <div class="h-16 flex w-full justify-between">
       <ul class="h-full flex gap-2">
         <li class="h-full">
@@ -22,7 +22,7 @@ layout: layouts/document.njk
       </button>
     </div>
   </nav>
-  <main class="container mx-auto px-4">
+  <main class="container mx-auto px-4 relative -top-16">
     {{ content | safe }}
   </main>
 </body>
