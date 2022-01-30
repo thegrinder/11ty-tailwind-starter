@@ -2,5 +2,6 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+@import '_styles/custom.css';
 @import '_styles/bounce.css';
 @import '_styles/fade.css';
