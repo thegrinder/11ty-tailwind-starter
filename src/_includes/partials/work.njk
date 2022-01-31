@@ -1,6 +1,8 @@
 {%- from "components/work.njk" import work -%}
+{%- from "components/section_title.njk" import section_title -%}
+
 <section class="min-h-screen py-24">
-  <h2 class="text-neutral-800 dark:text-white text-4xl sm:text-6xl font-semibold mb-24">Work</h2>
+  {{section_title({ content: 'Work' })}}
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
     {% for job in jobs %}
       {{ work(job) }}

@@ -1,5 +1,5 @@
 {% macro icon_button(params) %}
-  <button class="focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 ring-inset transition-shadow outline-none {{ params.class }}">
+  <button id="{{ params.id }}" class="focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 ring-inset transition-shadow outline-none rounded-md {{ params.class }}">
     {% include "icons/" + params.icon + ".njk" %}
   </button>
 {% endmacro %}
