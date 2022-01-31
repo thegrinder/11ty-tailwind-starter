@@ -1,0 +1,7 @@
+{% macro button_link(params) %}
+  <a class="bg-sky-700 hover:bg-sky-800 dark:bg-sky-700 hover:dark:bg-sky-600 focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 transition-all outline-none rounded-xl inline-block px-6 sm:px-8 py-4 sm:py-6 text-xl sm:text-2xl font-semibold" href="{{ params.href }}">
+    <span class="text-white">
+      {{ params.label }}
+    </span>
+  </a>
+{% endmacro %}

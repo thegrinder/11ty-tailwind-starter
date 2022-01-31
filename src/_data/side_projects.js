@@ -10,6 +10,6 @@ module.exports = [
       'Restructuring and organizing content',
       'Building a brand new website from scratch',
     ],
-    stack: ['React', 'Next.js', 'Tailwind CSS'],
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'Figma'],
   },
 ];

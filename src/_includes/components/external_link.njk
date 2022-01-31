@@ -1,5 +1,5 @@
 {% macro external_link(params) %}
-  <a target="_blank" href="{{ params.href }}" class="focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 transition-shadow outline-none rounded-md inline-flex items-center">
+  <a target="_blank" href="{{ params.href }}" class="focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 transition-shadow outline-none rounded-sm inline-flex items-center">
     <span class="mr-2">{{ params.label }}</span>
     <span class="text-lg">
       {% include "icons/external_link.njk" %}

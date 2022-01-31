@@ -9,7 +9,14 @@ module.exports = [
       'Designing and creating design components in figma',
       'Building a monorepo consisting of frontend libraries',
     ],
-    stack: ['Typescript', 'React', 'React Query', 'Tailwind CSS', 'Cypress'],
+    stack: [
+      'Typescript',
+      'React',
+      'React Query',
+      'Tailwind CSS',
+      'Cypress',
+      'Figma',
+    ],
   },
   {
     company: 'Docplanner',
