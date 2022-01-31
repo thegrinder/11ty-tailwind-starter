@@ -1,14 +1,26 @@
+{%- from "components/link.njk" import link -%}
+
 <nav class="container mx-auto relative z-10">
   <div class="h-20 flex w-full justify-between">
     <ul class="h-full flex gap-2 text-xl">
       <li class="h-full">
-        <a id="home" class="h-full flex items-center px-4 font-semibold" href="/">P.</a>
+        {{link({
+          id: 'home',
+          href: '/',
+          class: 'h-full flex items-center px-4 font-semibold',
+          label: 'P.'
+        })}}
       </li>
       <li class="h-full">
-        <a id="blog" class="h-full flex items-center px-4 font-semibold" href="/blog">Blog</a>
+        {{link({
+          id: 'blog',
+          href: '/blog',
+          class: 'h-full flex items-center px-4 font-semibold',
+          label: 'Blog'
+        })}}
       </li>
     </ul>
-    <button aria-label="Toggle color mode" id="color-mode-button" class="h-full flex items-center px-4 text-lg">
+    <button aria-label="Toggle color mode" id="color-mode-button" class="focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 ring-inset transition-shadow outline-none h-full flex items-center px-4 text-lg">
       {% include "icons/light_bulb.njk" %}
     </button>
   </div>

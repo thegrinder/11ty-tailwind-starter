@@ -6,7 +6,14 @@
           <img alt="{{ params.company }} logo" width="50px" height="50px" src="{{ params.logo }}" class="overflow-hidden rounded-md"/>
         </div>
         <div>
-          <h3 class="font-semibold text-xl">{{ params.company }}</h3>
+          <h3 class="font-semibold text-xl mb-0.5">
+            <a class="focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 outline-none inline-flex items-center rounded-sm transition-shadow" href="https://google.com">
+              <span class="mr-2">{{ params.company }}</span>
+              <span class="text-lg">
+                {% include "icons/external_link.njk" %}
+              </span>
+            </a>
+          </h3>
           <p class="text-slate-500 dark:text-slate-400 text-sm">{{ params.startDate }} - {{ params.endDate }}</p>
         </div>
       </div>
