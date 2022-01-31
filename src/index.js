@@ -32,12 +32,8 @@ window.addEventListener('DOMContentLoaded', () => {
         href: '/',
       },
       {
-        id: '#work',
-        href: '/work/',
-      },
-      {
-        id: '#contact',
-        href: '/contact/',
+        id: '#blog',
+        href: '/blog/',
       },
     ];
     const activeLink = navLinks.find(({ href }) => href === location.pathname);
@@ -45,7 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const removeIntro = () => {
-    console.log(Date.now() - localStorage.introTimestamp);
     const min = 1000 * 60;
     if (
       !localStorage.introTimestamp ||

@@ -4,7 +4,10 @@ module.exports = [
     logo: '/public/logos/cooltra.png',
     startDate: 'Jun 2021',
     endDate: 'till now',
-    items: [],
+    items: [
+      'Designing and creating design components in figma',
+      'Building a monorepo consisting of frontend libraries',
+    ],
     stack: ['Typescript', 'React', 'React Query', 'Tailwind CSS', 'Cypress'],
   },
   {
