@@ -1,6 +1,7 @@
 module.exports = [
   {
     company: 'Asociación Abejas Silvestres',
+    url: 'https://www.abejassilvestres.es',
     logo: '/public/logos/abejas-silvestres.svg',
     startDate: 'Oct 2021',
     endDate: 'Jan 2022',
