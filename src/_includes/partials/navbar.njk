@@ -1,4 +1,5 @@
 {%- from "components/link.njk" import link -%}
+{%- from "components/icon_button.njk" import icon_button -%}
 
 <nav class="container mx-auto relative z-10">
   <div class="h-20 flex w-full justify-between">
@@ -20,8 +21,9 @@
         })}}
       </li>
     </ul>
-    <button aria-label="Toggle color mode" id="color-mode-button" class="focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 ring-inset transition-shadow outline-none h-full flex items-center px-4 text-lg">
-      {% include "icons/light_bulb.njk" %}
-    </button>
+    {{icon_button({
+      class: 'h-full flex items-center px-4 text-lg',
+      icon: 'light_bulb'
+    })}}
   </div>
 </nav>
