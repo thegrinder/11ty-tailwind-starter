@@ -1,6 +1,6 @@
 {%- from "components/external_link.njk" import external_link -%}
 {% macro work(params) %}
-  <article class="bg-slate-50 dark:bg-slate-800 shadow-md dark:custom-shadow-white p-10 pb-12 rounded-xl h-full">
+  <article class="custom-card">
     <div class="flex flex-col h-full">
       <div class="flex gap-8 mb-8">
         <div class="shrink-0">
@@ -30,7 +30,7 @@
             <li class="flex items-center">
               <span class="text-slate-500 dark:text-slate-400">{{ tech }}</span>
               {% if loop.index !== params.stack.length %}
-                <span class="bg-sky-600 dark:bg-sky-300 mx-4 inline-block w-1.5 h-1.5 rounded-full"></span>
+                <span class="custom-dot mx-4"></span>
               {% endif %}
             </li>
           {% endfor %}

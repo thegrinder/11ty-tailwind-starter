@@ -1,3 +1,19 @@
 .dark .dark\:custom-shadow-white {
   box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 5%);
 }
+
+.custom-ring {
+  @apply focus:ring focus:ring-sky-500 dark:focus:ring-sky-400 transition-all outline-none;
+}
+
+.custom-card {
+  @apply bg-slate-50 dark:bg-slate-800 shadow-md p-10 pb-12 rounded-xl h-full;
+}
+
+.dark .custom-card {
+  box-shadow: inset 0 1px 0 0 rgb(255 255 255 / 5%);
+}
+
+.custom-dot {
+  @apply bg-sky-600 dark:bg-sky-300 inline-block w-1.5 h-1.5 rounded-full;
+}
