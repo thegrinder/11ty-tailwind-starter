@@ -1,13 +1,13 @@
 {%- from "components/external_link.njk" import external_link -%}
 {% macro work(params) %}
-  <article class="bg-slate-50 dark:bg-slate-800 shadow-md dark:custom-shadow-white p-8 pb-10 rounded-xl h-full">
+  <article class="bg-slate-50 dark:bg-slate-800 shadow-md dark:custom-shadow-white p-10 pb-12 rounded-xl h-full">
     <div class="flex flex-col h-full">
       <div class="flex gap-8 mb-8">
         <div class="shrink-0">
           <img alt="{{ params.company }} logo" width="50px" height="50px" src="{{ params.logo }}" class="overflow-hidden rounded-md"/>
         </div>
         <div>
-          <h3 class="font-semibold text-xl mb-0.5">
+          <h3 class="font-semibold text-2xl">
             {{external_link({
               href: params.url,
               label: params.company
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="flex flex-col lg:ml-20 grow">
-        <ul class="grow mb-8">
+        <ul class="grow mb-10">
           {% for item in params.items %}
             <li class="flex mb-2 leading-relaxed">
               <span class="text-sky-500 dark:text-sky-300 text-lg mr-2 mt-0.5">{% include "icons/check_circle.njk" %}</span>

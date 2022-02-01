@@ -2,10 +2,10 @@
 layout: layouts/document.njk
 ---
 
-<body class="bg-slate-100 text-neutral-700 dark:bg-slate-900  dark:text-neutral-100 font-body h-full relative">
+<body class="bg-slate-100 dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-body h-full relative">
   {% include "partials/intro.njk" %}
   {% include "partials/navbar.njk" %}
-  <main class="container mx-auto px-4 relative -top-16">
+  <main class="container mx-auto px-4 sm:px-8 relative -top-16">
     {{ content | safe }}
   </main>
 </body>
