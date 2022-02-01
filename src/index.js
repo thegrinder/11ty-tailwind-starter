@@ -15,12 +15,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     u('#color-mode-button').first().onclick = () => {
-      localStorage.setItem(
-        'theme',
-        u('#color-mode-button').hasClass(darkModeClass)
-          ? undefined
-          : darkModeClass
-      );
+      if (u('html').hasClass(darkModeClass)) {
+        localStorage.removeItem('theme');
+      } else {
+        localStorage.setItem('theme', 'dark');
+      }
       u('html').toggleClass(darkModeClass);
     };
   };
@@ -41,18 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const removeIntro = () => {
-    const min = 1000 * 60;
-    if (
-      !localStorage.introTimestamp ||
-      Date.now() - localStorage.introTimestamp > 10 * min
-    ) {
-      localStorage.setItem('introTimestamp', Date.now());
-      setTimeout(() => {
-        u('#intro').remove();
-      }, 2000);
-    } else {
+    setTimeout(() => {
       u('#intro').remove();
-    }
+    }, 2000);
   };
 
   initializeColorMode();
