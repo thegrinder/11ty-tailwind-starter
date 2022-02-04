@@ -39,9 +39,9 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const removeIntro = () => {
-    // setTimeout(() => {
-    //   u('#intro').remove();
-    // }, 2000);
+    setTimeout(() => {
+      u('#intro').remove();
+    }, 2000);
   };
 
   const init = () => {
