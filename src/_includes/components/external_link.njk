@@ -1,7 +1,7 @@
 {% macro external_link(params) %}
-  <a target="_blank" href="{{ params.href }}" class="custom-ring rounded-sm inline-flex items-center">
-    <span class="mr-2">{{ params.label }}</span>
-    <span class="text-xl">
+  <a target="_blank" href="{{ params.href }}" class="custom-ring rounded-sm">
+    <span class="mr-1">{{ params.label }}</span>
+    <span class="inline-block top-0.5 relative text-xl">
       {% include "icons/external_link.njk" %}
     </span>
   </a>

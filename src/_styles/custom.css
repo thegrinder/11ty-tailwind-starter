@@ -7,7 +7,7 @@
 }
 
 .card {
-  @apply bg-slate-50 dark:bg-slate-800 shadow-md p-10 pb-12 rounded-xl h-full;
+  @apply bg-slate-50 dark:bg-slate-800 shadow-md p-8 sm:p-10 pb-12 rounded-xl h-full;
 }
 
 .dark .card {
