@@ -3,8 +3,8 @@ module.exports = {
   darkMode: 'class',
   theme: {
     fontFamily: {
-      display: 'Montserrat',
-      body: 'Montserrat',
+      display: ['Montserrat', 'sans-serif'],
+      body: ['Montserrat', 'sans-serif'],
     },
     extend: {},
   },

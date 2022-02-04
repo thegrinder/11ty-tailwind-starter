@@ -1,9 +1,8 @@
 import u from 'umbrellajs';
 
 window.addEventListener('DOMContentLoaded', () => {
-  const darkModeClass = 'dark';
-
   const initializeColorMode = () => {
+    const darkModeClass = 'dark';
     if (
       localStorage.theme === darkModeClass ||
       (!('theme' in localStorage) &&
@@ -40,12 +39,16 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   const removeIntro = () => {
-    setTimeout(() => {
-      u('#intro').remove();
-    }, 2000);
+    // setTimeout(() => {
+    //   u('#intro').remove();
+    // }, 2000);
   };
 
-  initializeColorMode();
-  markActiveLink();
-  removeIntro();
+  const init = () => {
+    initializeColorMode();
+    markActiveLink();
+    removeIntro();
+  };
+
+  init();
 });
