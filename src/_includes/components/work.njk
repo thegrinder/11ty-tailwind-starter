@@ -1,4 +1,5 @@
 {%- from "components/external_link.njk" import external_link -%}
+
 {% macro work(params) %}
   <article class="card">
     <div class="flex flex-col h-full">
@@ -13,14 +14,18 @@
               label: params.company
             })}}
           </h3>
-          <p class="text-slate-500 dark:text-slate-400 text-sm">{{ params.startDate }} - {{ params.endDate }}</p>
+          <p class="text-slate-500 dark:text-slate-400 text-sm">
+            {{ params.startDate }} - {{ params.endDate }}
+          </p>
         </div>
       </div>
       <div class="flex flex-col lg:ml-20 grow">
         <ul class="grow mb-10">
           {% for item in params.items %}
             <li class="flex mb-2 leading-relaxed">
-              <span class="text-sky-500 dark:text-sky-300 text-lg mr-2 mt-0.5">{% include "icons/check_circle.njk" %}</span>
+              <span class="text-sky-500 dark:text-sky-300 text-lg mr-2 mt-0.5">
+                {% include "icons/check_circle.njk" %}
+              </span>
               <span>{{ item }}</span>
             </li>
           {% endfor %}
@@ -28,7 +33,9 @@
         <ul class="flex flex-wrap text-sm">
           {% for tech in params.stack %}
             <li class="flex items-center">
-              <span class="text-slate-500 dark:text-slate-400">{{ tech }}</span>
+              <span class="text-slate-500 dark:text-slate-400">
+                {{ tech }}
+              </span>
               {% if loop.index !== params.stack.length %}
                 <span class="dot mx-4"></span>
               {% endif %}
