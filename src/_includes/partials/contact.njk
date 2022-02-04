@@ -1,10 +1,11 @@
-{%- from "components/section_title.njk" import section_title -%}
-{%- from "components/button_link.njk" import button_link -%}
-
 <section class="py-24 text-center">
-  {{section_title({ content: 'Contact', class: 'mb-4 sm:mb-8' })}}
+  <h2 class="section-title mb-4 sm:mb-8">
+    Contact
+  </h2>
   <p class="text-slate-500 dark:text-slate-500 block text-xl sm:text-2xl max-w-xl mx-auto leading-normal sm:leading-normal mb-14 sm:mb-24">
   Don't be a stranger and drop me a line and I will get back to you as soon as I can
   </p>
-  {{button_link({ label: 'Say hello', href: 'mailto:szczepkowski.dev@gmail.com' })}}
+  <a class="button" href="mailto:szczepkowski.dev@gmail.com">
+    Say hello
+  </a>
 </section>

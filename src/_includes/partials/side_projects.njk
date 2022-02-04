@@ -1,8 +1,9 @@
 {%- from "components/work.njk" import work -%}
-{%- from "components/section_title.njk" import section_title -%}
 
 <section class="pt-24 pb-48">
-  {{section_title({ content: 'Side projects', class: 'mb-12 sm:mb-24' })}}
+  <h2 class="section-title mb-12 sm:mb-24">
+    Side projects
+  </h2>
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-14">
     {% for project in side_projects %}
       {{ work(project) }}

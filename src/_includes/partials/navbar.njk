@@ -1,30 +1,19 @@
-{%- from "components/link.njk" import link -%}
-{%- from "components/icon_button.njk" import icon_button -%}
-
 <nav class="container mx-auto px-2 sm:px-4 relative z-10">
   <div class="h-20 flex w-full justify-between">
     <ul class="h-full flex gap-2 text-xl">
       <li class="h-full">
-        {{link({
-          id: 'home',
-          href: '/',
-          class: 'h-full flex items-center px-4 font-semibold',
-          label: 'P.'
-        })}}
+        <a id="home" class="custom-ring ring-inset rounded-md h-full flex items-center px-4 font-semibold" href="/">
+          P.
+        </a>
       </li>
       <li class="h-full">
-        {{link({
-          id: 'blog',
-          href: '/blog',
-          class: 'h-full flex items-center px-4 font-semibold',
-          label: 'Blog'
-        })}}
+        <a id="blog" class="custom-ring ring-inset rounded-md h-full flex items-center px-4 font-semibold" href="/blog">
+          Blog
+        </a>
       </li>
     </ul>
-    {{icon_button({
-      id: 'color-mode-button',
-      class: 'h-full flex items-center px-4 text-lg',
-      icon: 'light_bulb'
-    })}}
+    <button id="color-mode-button" class="ring-inset custom-ring rounded-md flex items-center px-4 text-lg">
+      {% include "icons/light_bulb.njk" %}
+    </button>
   </div>
 </nav>
