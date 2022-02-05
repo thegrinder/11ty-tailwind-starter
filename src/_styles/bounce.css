@@ -29,7 +29,5 @@
 }
 
 .bounce {
-  animation-duration: 1.5s;
-  animation-name: bounce;
-  transform-origin: center bottom;
+  animation: bounce 1.5s linear;
 }

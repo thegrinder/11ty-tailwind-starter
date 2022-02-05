@@ -7,9 +7,19 @@
   }
 }
 
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s linear forwards;
+}
+
 .fade-out-with-delay {
-  animation-duration: 0.3s;
-  animation-delay: 1.5s;
-  animation-name: fadeOut;
-  animation-fill-mode: forwards;
+  animation: fadeOut 0.3s linear 1.5s forwards;
 }

@@ -44,10 +44,26 @@ window.addEventListener('DOMContentLoaded', () => {
     }, 2000);
   };
 
+  const fadeInOnScroll = () => {
+    const callback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !u(entry.target).hasClass('fade-in')) {
+          u(entry.target).addClass('fade-in');
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback);
+    const workCards = u('#work-item');
+    workCards.addClass('opacity-0');
+    workCards.each((workCard) => observer.observe(workCard));
+  };
+
   const init = () => {
     initializeColorMode();
     markActiveLink();
     removeIntro();
+    fadeInOnScroll();
   };
 
   init();
